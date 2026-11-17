@@ -12,6 +12,14 @@ dist
 dist-ssr
 *.local
 
+# .NET artifacts
+bin/
+obj/
+*.user
+*.userosscache
+*.suo
+*.userprefs
+
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json

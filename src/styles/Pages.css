@@ -182,6 +182,20 @@
   background-color: #fecaca;
 }
 
+.btn-sm-edit {
+  background-color: #dbeafe;
+  color: #1e40af;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.btn-sm-edit:hover {
+  background-color: #bfdbfe;
+}
+
 /* 4. Form thêm bài viết (CreatePost Form) */
 .form-card {
   background-color: #ffffff;

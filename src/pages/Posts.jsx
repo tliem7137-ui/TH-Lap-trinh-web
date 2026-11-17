@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import '../styles/Pages.css';
 
-function Posts({ posts, onDeletePost }) {
+function Posts({ posts, onDeletePost, onToggleStatus }) {
   const [filterStatus, setFilterStatus] = useState('All');
 
   const filteredPosts = posts.filter(post => {
@@ -73,9 +73,16 @@ function Posts({ posts, onDeletePost }) {
                   <td style={{ textAlign: 'center' }}>
                     <div className="action-btn-group" style={{ justifyContent: 'center' }}>
                       <button 
+                        className="btn-sm-edit"
+                        onClick={() => onToggleStatus && onToggleStatus(post.id, post.status)}
+                        title="Đổi trạng thái xuất bản (PUT method)"
+                      >
+                        Đổi trạng thái
+                      </button>
+                      <button 
                         className="btn-sm-delete"
-                        onClick={() => onDeletePost(post.id)}
-                        title="Xóa bài viết"
+                        onClick={() => onDeletePost && onDeletePost(post.id)}
+                        title="Xóa bài viết (DELETE method)"
                       >
                         Xóa
                       </button>
